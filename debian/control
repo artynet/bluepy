@@ -1,0 +1,31 @@
+Source: python-bluepy
+Section: python
+Priority: optional
+Maintainer: Kali Developers <devel@kali.org> 
+Uploaders: Sophie Brun <sophie@freexian.com>
+Build-Depends: debhelper (>= 11), dh-python, python3-all, python3-setuptools, python3-sphinx, libglib2.0-dev
+Standards-Version: 4.1.4
+Homepage: https://github.com/IanHarvey/bluepy
+Vcs-Git: git://git.kali.org/packages/python-bluepy.git
+Vcs-Browser: http://git.kali.org/gitweb/?p=packages/python-bluepy.git;a=summary
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-bluepy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Suggests: python-bluepy-doc
+Description: Python interface to Bluetooth Low Energy on Linux (Python 3)
+ This package contains a Python module to allow Bluetooth Low Energy (a.k.a
+ Bluetooth Smart) peripherals to be controlled from Python.
+ .
+ This package installs the library for Python 3.
+
+Package: python-bluepy-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Python interface to Bluetooth Low Energy on Linux (common documentation)
+ This package contains a Python module to allow Bluetooth Low Energy (a.k.a
+ Bluetooth Smart) peripherals to be controlled from Python.
+ .
+ This is the common documentation package.
